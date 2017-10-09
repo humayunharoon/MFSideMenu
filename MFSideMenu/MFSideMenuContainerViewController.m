@@ -414,7 +414,7 @@ typedef enum {
 
 - (void) setLeftSideMenuFrameToClosedPosition {
     if(!self.leftMenuViewController) return;
-    CGRect leftFrame = [self.leftMenuViewController view].frame;
+    CGRect leftFrame = [self.centerViewController view].frame;
     leftFrame.size.width = self.leftMenuWidth;
     leftFrame.origin.x = (self.menuSlideAnimationEnabled) ? -1*leftFrame.size.width / self.menuSlideAnimationFactor : 0;
     leftFrame.origin.y = 0;
